@@ -49,7 +49,7 @@ function closurify(sourceName, fileName) {
 
   const closureOptions = {
     compilation_level: 'ADVANCED',
-    language_in: 'ES6_STRICT',
+    language_in: 'STABLE',
     language_out: 'ES5_STRICT',
     isolation_mode: 'NONE',
     output_wrapper_file: 'closure-output.txt',
@@ -59,11 +59,11 @@ function closurify(sourceName, fileName) {
     rewrite_polyfills: false,
     module_resolution: 'NODE',
     entry_point: `entrypoints/${sourceName}-index.js`,
-    dependency_mode: 'STRICT',
+    dependency_mode: 'PRUNE',
     externs: [
       'externs/webcomponents.js',
       'node_modules/@webcomponents/custom-elements/externs/custom-elements.js',
-      'node_modules/@webcomponents/html-imports/externs/html-imports.js',
+      'node_modules/webcomponents-polyfills/packages/html-imports/externs/html-imports.js',
       'node_modules/@webcomponents/shadycss/externs/shadycss-externs.js',
       'node_modules/@webcomponents/shadydom/externs/shadydom.js'
     ]
@@ -74,6 +74,7 @@ function closurify(sourceName, fileName) {
       'src/*.js',
       'node_modules/promise-polyfill/src/*.js',
       'node_modules/@webcomponents/**/*.js',
+      'node_modules/webcomponents-polyfills/packages/html-imports/src/*.js',
       '!node_modules/@webcomponents/*/externs/*.js',
       '!node_modules/@webcomponents/*/node_modules/**',
       '!**/bower_components/**'

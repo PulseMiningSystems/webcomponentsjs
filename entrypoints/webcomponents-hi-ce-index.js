@@ -14,7 +14,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
  * Used in: Safari 10, Firefox once SD is shipped
  */
 
-import '../node_modules/@webcomponents/html-imports/src/html-imports.js';
+import '../node_modules/webcomponents-polyfills/packages/html-imports/src/html-imports.js';
 import '../node_modules/@webcomponents/custom-elements/src/custom-elements.js';
 
 import '../src/post-polyfill.js';
