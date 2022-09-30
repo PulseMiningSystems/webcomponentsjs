@@ -28,7 +28,6 @@
   "homepage": "https://webcomponents.org/polyfills",
   "devDependencies": {
     "@webcomponents/custom-elements": "^1.2.1",
-    "webcomponents-polyfills": "PulseMiningSystems/polyfills",
     "@webcomponents/shadycss": "^1.9.0",
     "@webcomponents/shadydom": "^1.5.0",
     "@webcomponents/template": "^1.4.0",
@@ -49,7 +48,8 @@
     "run-sequence": "^2.2.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^1.1.2",
-    "web-component-tester": "^6.9.2"
+    "web-component-tester": "^6.9.2",
+    "webcomponents-polyfills": "github:PulseMiningSystems/polyfills"
   },
   "publishConfig": {
     "access": "public"
